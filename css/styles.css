@@ -1,0 +1,460 @@
+/*BODY*/
+body, html {
+  width:100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  line-height: 1.6; 
+  font-weight: 300;
+  background: white;
+}
+/* --------------------------------------------------------------
+LAYOUT
+-------------------------------------------------------------- */
+
+footer {
+    border-top: 1px solid #FCF4D9;
+    margin: 2em auto;
+    padding: 20;
+    height: 10%;
+    text-align: center;
+    background: black;
+    color: #DAA520;
+  }
+ #userLogin, #userPass {
+  clear: both;
+  float: left;
+  width: 40%;
+  color: #555;
+  font-size: 0.85em;
+  padding: 0.8em;
+  margin: 20 30 20 30;
+  border: solid #edf1f1 thick;
+ }
+ #login input{
+   clear: both;
+   position: relative;
+   margin: 20 30 20 30; 
+   background: #DAA520;
+   color: black;
+   cursor: pointer;
+   padding: 0.7em;
+   display: block;
+   border-radius: 4px;
+   font-size: 1em;
+}
+
+/*--------------------------------------------------------------------
+
+----------------------------------------------------------------------*/
+/*---------------------
+DESKTOP
+-----------------------------*/
+
+@media all and (min-width: 960px) {
+#wrapper { margin:0 width: 960px; }
+div.clear {clear:both;}
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 3em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+
+}
+/*---------------------
+TABLET
+-----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+/* WRAPPERS */
+#wrapper { margin:0 width: 768px; }
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 2.3em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+}
+/*---------------------
+PHONE
+-----------------------------*/
+@media all and (min-width: 320px) and (max-width: 767px) {
+/* WRAPPERS */
+#wrapper { margin:0 width: 320px; }
+div.clear {clear:both;}
+
+.header { 
+  position: relative; 
+  text-align: center;
+  color: #DAA520;
+  text-shadow: 1px 1px 2px #222;
+  font-size: 2em;
+  background: url('../images/dalhousieuni.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border-bottom: 1px solid #f0f0f0; 
+  width: 100%; 
+  height: 35%;
+  padding: 10px 0; 
+}
+}
+/*---------------------------------------------------
+-----------------------------------------------------*/
+#schedule-container {
+  width:540px;
+  min-height:60%;
+  margin:0 auto;
+  text-align:center;
+  float:left;
+  position:relative;
+}
+
+#students-container {
+  width:40%;
+  height:100%;
+  min-height: 100%
+}
+
+#student-list {
+  border:1px solid black;
+  width:100%;
+  min-height:60%;
+  min-width:150px;
+}
+
+#side-content {
+  float:left;
+  width:30%;
+  height:80%;
+  margin-left:2%;
+}
+
+#side-content h2 {
+  text-align:center;
+}
+
+.time-column {
+  width:200px;
+  display:table-cell;
+  height:30px;
+  margin:0 auto;
+  position:relative;
+  left:43px;
+}
+
+table {
+  margin:0 auto;
+}
+td {
+  border:1px solid black;
+  width:100px;
+  height:37px;
+}
+
+h3 {
+  font-size:18px;
+}
+
+#last-tc {
+  padding-right:20px;
+  position:relative;
+  left:32px;
+}
+
+.block-box-blue {
+  background:rgba(25,118,210,0.4);
+}
+
+.block-box-pink {
+  background:rgba(255,64,129,0.4);
+}
+
+.block-box-purple {
+  background:rgba(123,31,162,0.4);
+}
+
+.block-box-black {
+  background:rgba(33,33,33,0.4);
+}
+
+.block-box-amber {
+  background:rgba(255,160,0,0.4);
+}
+
+.block-box-green {
+  background:rgba(76,175,80,0.4);
+}
+
+.block-box-red {
+  background:rgba(211,47,47,0.4);
+}
+
+.block-box-brown {
+  background:rgba(121,85,72,0.4);
+}
+
+.block-box-deep-purple {
+  background:rgba(81,45,168,0.4);
+}
+
+.block-box-yellow {
+  background:rgba(255,235,59,0.4);
+}
+
+.block-box-blue-grey {
+  background:rgba(96,125,139,0.4);
+}
+
+.block-box-indigo {
+  background:rgba(83,109,254,0.4);
+}
+
+.block-box-cyan {
+  background:rgba(0,151,167,0.4);
+}
+
+.block-box-teal {
+  background:rgba(0,150,136,0.4);
+}
+
+.block-box-lime {
+  background:rgba(205,220,57,0.4);
+}
+
+
+/* Block Positioning Classes */
+
+/* Part 1 - Length */
+.block-half-hour {
+  position:absolute;
+  width: 54px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.block-hour {
+  position:absolute;
+  width: 54px;
+  height: 37px;
+  border-radius: 5px;
+}
+
+.block-hour-half {
+  position:absolute;
+  width: 54px;
+  height: 56px;
+  border-radius: 5px;
+}
+
+.block-two-hours {
+  position:absolute;
+  width: 54px;
+  height: 76px;
+  border-radius: 5px;
+}
+
+.block-two-half {
+  position:absolute;
+  width: 54px;
+  height: 96px;
+  border-radius: 5px;
+}
+
+.block-three-hours {
+  position:absolute;
+  width: 54px;
+  height: 116px;
+  border-radius: 5px;
+}
+
+.block-three-half {
+  position:absolute;
+  width: 54px;
+  height: 136px;
+  border-radius: 5px;
+}
+
+.block-four-hours {
+  position:absolute;
+  width: 54px;
+  height: 154px;
+  border-radius: 2px;
+}
+
+/* Part 2 - Day */
+
+.monday {
+	left:69px;
+}
+
+.tuesday {
+	left:163px;
+}
+
+.wednesday {
+	left:267px;
+}
+
+.thursday {
+	left:372px;
+}
+
+.friday {
+	left:469px;
+}
+
+/* Part 3 - Time */
+
+.eight {
+	top:76px;
+}
+
+.eightthirty {
+	top:92px;
+}
+
+.nine {
+	top:114px;
+}
+
+.ninethirty {
+	top:132px;
+}
+
+.ten {
+	top:152px;
+}
+
+.tenthirty {
+	top:171px;
+}
+
+.eleven {
+	top:190px;
+}
+
+.eleventhirty {
+	top:209px;
+}
+
+.twelve {
+	top:228px;
+}
+
+.twelvethirty {
+	top:247px;
+}
+
+.thirteen {
+	top:267px;
+}
+
+.thirteenthirty {
+	top:286px;
+}
+
+.fourteen {
+	top:306px;
+}
+
+.fourteenthirty {
+	top:325px;
+}
+
+.fifteen {
+	top:343px;
+}
+
+.fifteenthirty {
+	top:362px;
+}
+
+.sixteen {
+	top:382px;
+}
+
+.sixteenthirty {
+	top:401px;
+}
+
+.seventeen {
+	top:421px;
+}
+
+.seventeenthirty {
+	top:439px;
+}
+
+.eightteen {
+	top:457px;
+}
+
+.eightteenthirty {
+	top:477px;
+}
+
+.ninteen {
+	top:496px;
+}
+
+.ninteenthirty {
+	top:515px;
+}
+
+.twenty {
+	top:535px;
+}
+
+.twentythirty {
+	top:553px;
+}
+
+.twentyone {
+	top:574px;
+}
+
+.twentyonethirty {
+	top:591px;
+}
+
+.twentytwo {
+	top:610px;
+}
+
+.twentytwothirty {
+	top:630px;
+}
+
+.twentythree {
+	top:649px;
+}
+
+.twentythreethirty {
+	top:669px;
+}
+
+
+/* Student Name List */
+
+ul {
+  list-style-type:none;
+}
