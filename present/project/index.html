@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Logo and Nav -->
+<header> 
+  
+  <img id="logo" width="75px" src="images/dallogo.gif" alt="Dalhousie Logo">
+
+  <h1> Dal Quick Collab </h1> 
+  <nav>
+    <ul class="navigation">
+      <li><a href="../../signout.php">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
+
+<!-- Content Wrapper -->
+<div id="wrapper">
+ 
+<!-- Side content -->
+<div id="side-wrapper">
+  <div id="side-content">
+    <div id="students-container">
+      <h2> Students </h2>
+      <div id="student-list">
+        <ul id="students-ul">
+        </ul>
+      </div>
+    </div>
+    <div id="current-student-view">
+      <h4> Students in Schedule: </h4>
+      <ul id="current-student-list"> 
+      </ul>
+    </div>
+  </div>
+
+  <div id="additions">
+      <h4 id="ppltxt"> Need to add more to people to collab with? </h4>
+      <button id="addStudentBtn"> Add a Student </button>
+      <h4 id="blocktxt"> Want to add more blocks to your schedule?</h4>
+      <button id="addBlockBtn"> Add to your Schedule </button>
+      <h4 id="removetxt"> Need to remove a student from your list? </h4>
+      <button id="removebtn"> Remove a Student </button>
+  </div>
+</div>
+
+<!-- Modals for user input -->
+<!-- Add a student -->
+<div id="addStudentModal" class="modal">
+<div class="modal-content">
+  <div class="modal-header">
+  <span class="close">&times;</span>
+  <h2>Add a Student</h2>
+  </div>
+  <div class="modal-body">
+    <div id="studentform">
+    <form id="addstudentform" action="../../makeGroup.php" method="post">
+        <label for="BInput"> Student B00: </label>
+        <br>
+        <br>
+        <input onblur="validateStudentModal()" type="text" placeholder="Enter B00" name="BInput" id="BInput">
+        <br>
+        <p id="student-modal-fb" style="color:red"></p>
+        <br>
+        <button id="addstudentmodalbtn"> Submit </button>
+      </form>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Add a schedule block -->
+<div id="addBlockModal" class="modal">
+<div class="modal-content">
+  <div class="modal-header">
+  <span class="close">&times;</span>
+  <h2>Add a Schedule Block</h2>
+  </div>
+  <div class="modal-body">
+    <div id="blockform">
+    <form id="timeblockform" action="../../makeBlock.php" method="post">
+        <!-- Name -->
+        <label for="BlName">Name</label>
+        <br>
+        <br>
+        <input type="text" onblur="validateTimeBlock()" placeholder="Title of TimeSlot" name="bltitle" id="bltitle">
+        <br>
+
+        <!-- Day -->
+        <label for="BlDay">Day</label>
+        <br>
+        <br>
+        <select name="BlDay">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+        </select>
+        <br>
+        <br>
+
+        <!-- Start Time -->
+        <label for="StTime">Start Time</label>
+        <br>
+        <br>
+        <select onblur="validateTimeBlock()" name="StTime">
+          <option value="800">8:00</option>
+          <option value="830">8:30</option>
+          <option value="900">9:00</option>
+          <option value="930">9:30</option>
+          <option value="1000">10:00</option>
+          <option value="1030">10:30</option>
+          <option value="1100">11:00</option>
+          <option value="1130">11:30</option>
+          <option value="1200">12:00</option>
+          <option value="1230">12:30</option>
+          <option value="1300">1:00</option>
+          <option value="1330">1:30</option>
+          <option value="1400">2:00</option>
+          <option value="1430">2:30</option>
+          <option value="1500">3:00</option>
+          <option value="1530">3:30</option>
+          <option value="1600">4:00</option>
+          <option value="1630">4:30</option>
+          <option value="1700">5:00</option>
+          <option value="1730">5:30</option>
+          <option value="1800">6:00</option>
+          <option value="1830">6:30</option>
+          <option value="1900">7:00</option>
+          <option value="1930">7:30</option>
+          <option value="2000">8:00</option>
+          <option value="2030">8:30</option>
+          <option value="2100">9:00</option>
+          <option value="2130">9:30</option>
+          <option value="2200">10:00</option>
+          <option value="2230">10:30</option>
+          <option value="2300">11:00</option>
+          <option value="2330">11:30</option>
+        </select>
+        <br>
+        <br>
+
+        <!-- End Time -->
+        <label for="EndTime">End Time</label>
+        <br>
+        <br>
+        <select onblur="validateTimeBlock()" name="EndTime">
+          <option value="800">8:00</option>
+          <option value="830">8:30</option>
+          <option value="900">9:00</option>
+          <option value="930">9:30</option>
+          <option value="1000">10:00</option>
+          <option value="1030">10:30</option>
+          <option value="1100">11:00</option>
+          <option value="1130">11:30</option>
+          <option value="1200">12:00</option>
+          <option value="1230">12:30</option>
+          <option value="1300">1:00</option>
+          <option value="1330">1:30</option>
+          <option value="1400">2:00</option>
+          <option value="1430">2:30</option>
+          <option value="1500">3:00</option>
+          <option value="1530">3:30</option>
+          <option value="1600">4:00</option>
+          <option value="1630">4:30</option>
+          <option value="1700">5:00</option>
+          <option value="1730">5:30</option>
+          <option value="1800">6:00</option>
+          <option value="1830">6:30</option>
+          <option value="1900">7:00</option>
+          <option value="1930">7:30</option>
+          <option value="2000">8:00</option>
+          <option value="2030">8:30</option>
+          <option value="2100">9:00</option>
+          <option value="2130">9:30</option>
+          <option value="2200">10:00</option>
+          <option value="2230">10:30</option>
+          <option value="2300">11:00</option>
+          <option value="2330">11:30</option>
+        </select>
+        <br>
+        <br>
+        <p id="timeblockfb" style="color:red"></p>
+        <br>
+        <button id="timeblockbtn" type="submit"> Submit </button>
+      </form>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Remove a student -->
+<div id="removeStudentModal" class="modal">
+<div class="modal-content">
+  <div class="modal-header">
+  <span class="close">&times;</span>
+  <h2>Remove a Student</h2>
+  </div>
+  <div class="modal-body">
+    <div id="removeform">
+    <form id="removestudentform" action="../../removeStudent.php" method="post">
+        <!-- End Time -->
+        <label for="RemovableStudents">Choose Student to Remove</label>
+        <br>
+        <br>
+        <select onblur="validateRemoval()" name="RemovableStudents" id="remove-students-options">
+          <option value="NONE"> Select a Student </option>
+        </select>
+
+        <br>
+        <br>
+        <p id="removestudentsfb" style="color:red;"></p>
+        <br>
+        <button id="removestudentmodalbtn" type="submit"> Submit </button>
+
+      </form>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- A divider to better separate side and main content -->
+<div id="divider"> 
+  <img id="firstDivider" class="dotdivide" src="images/bluecircle.png" alt="Blue Divider">
+  <img class="dotdivide" src="images/pinkcircle.png" alt="Pink Divider">
+  <img class="dotdivide" src="images/redcircle.png" alt="Red Divider">
+  <img class="dotdivide" src="images/greencircle.png" alt="Green Divider">
+  <img class="dotdivide" src="images/darkbluecircle.png" alt="Dark Blue Divider">
+  <img class="dotdivide" src="images/orangecircle.png" alt="Orange Divider">
+</div>
+
+<!-- Our schedule view -->
+<div id="schedule-container">
+  <h2>Schedule</h2>  
+
+  <div class="time-column">
+
+      <h3>Monday</h3>
+
+  </div>
+
+  <div class="time-column">
+
+      <h3>Tuesday</h3>
+
+  </div>
+
+  <div class="time-column">
+
+      <h3>Wednesday</h3>
+
+  </div>
+
+  <div class="time-column">
+
+      <h3>Thursday</h3>
+
+  </div>
+
+  <div class="time-column" id="last-tc">
+
+      <h3>Friday</h3>
+
+  </div>
+
+  <img src="images/scheduleview.PNG" alt="Schedule View" width="550px">
+
+</div>
+
+
+<!-- JavaScript-->
+<script src="js/logic.js"></script>
+
+</body>
+</html>

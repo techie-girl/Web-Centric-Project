@@ -1,0 +1,641 @@
+/* Basic Tags */
+
+body, html {
+  height:auto;
+  font-family: "Trebuchet MS";
+  min-width:670px;
+}
+
+header {
+  text-align:center;
+  width:100%;
+  height:95px;
+  background-color:white;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  width:75%;
+}
+
+h1 {
+  margin-left:20px;
+  float:left;
+  font-size:36px;
+  position:relative;
+  bottom:3px;
+}
+
+h2 {
+  text-size
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
+
+header nav { 
+  float:right; 
+  padding: 20px 25px 25px 25px;
+  position: relative;
+    display: inline-block; 
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #53ccf1;
+}
+
+button:hover {
+    background-color: #53ccf1;
+    color: white;
+}
+
+ul {
+  list-style-type:none;
+  position:relative;
+  left:-25px;
+  top:2px;
+}
+
+li {
+  margin-top:5px;
+}
+
+table {
+  margin:0 auto;
+}
+td {
+  border:1px solid black;
+  width:100px;
+  height:37px;
+}
+
+h3 {
+  font-size:18px;
+}
+
+ul {
+  list-style-type:none;
+}
+
+/* Navigation Bar */
+
+nav ul.navigation { 
+  float:left; 
+  padding: 0; 
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+nav ul.navigation li { 
+  float: left; 
+  list-style-type: none;
+}
+
+ul.navigation li a, ul.navigation li a:link, ul.navigation li a:active { 
+  display: block; 
+  padding: 0.5em; 
+  margin: 0 2px; 
+  text-decoration: none;
+  color: #000080; 
+  font-weight: bold; 
+  letter-spacing: 1px;
+}
+
+ul.navigation li a:hover {
+  color: #238FBC; 
+  padding-bottom: 0.3em; 
+}
+
+ul.navigation li a:visited { 
+  color: #238FBC; 
+}
+
+/* Specific Elements and Divisions */
+
+#logo {
+  float:left;
+  margin-left:20px;
+}
+
+#divider {
+  float:left;
+  margin-left:30px;
+  margin-right:50px;
+  width:32px;
+  height:auto;
+}
+
+.dotdivide {
+  margin-top:60px;
+}
+
+#firstDivider {
+  margin-top:150px;
+}
+
+#additions {
+  text-align:center;
+  width:200px;
+  height:auto;
+  margin:0 auto;
+}
+
+#wrapper {
+  display:block;
+  width:85%;
+  position: absolute;
+  height: auto;
+  z-index: 15;
+  left: 50%;
+  margin-left:-560px;
+  margin-top:15px;
+}
+
+#side-wrapper {
+  display:inline;
+  width:350px;
+  float:left;
+}
+
+#schedule-container {
+  display:inline-block;
+  width:540px;
+  height:auto;
+  margin:0 auto;
+  text-align:center;
+  float:left;
+  position:relative;
+}
+
+#students-container {
+  width:350px;
+  height:auto;
+  margin-left:0px;
+  min-height: 100%;
+  text-align:center;
+}
+
+#student-list {
+  width:350px;
+  min-height:60%;
+  min-width:150px;
+}
+
+
+#student-list li, #current-student-list li {
+  margin-left:30px;
+  margin-bottom:10px;
+}
+
+#student-list input, #current-student-list input {
+  margin-left:5px;
+}
+
+#side-content {
+  float:left;
+  width:350px;
+  height:auto;
+}
+
+#side-content h2 {
+  text-align:center;
+}
+
+.time-column {
+  width:200px;
+  display:table-cell;
+  height:30px;
+  margin:0 auto;
+  position:relative;
+  left:42px;
+}
+
+#current-student-view {
+  width:350px;
+  text-align:center;
+}
+
+#last-tc {
+  padding-right:20px;
+  position:relative;
+  left:32px;
+}
+
+#removebtn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ff0000;
+}
+
+#removebtn:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Schedule Block Colors */
+
+.block-box-blue {
+  background:rgba(25,118,210,0.4);
+}
+
+.block-box-pink {
+  background:rgba(255,64,129,0.4);
+}
+
+.block-box-purple {
+  background:rgba(123,31,162,0.4);
+}
+
+.block-box-black {
+  background:rgba(33,33,33,0.4);
+}
+
+.block-box-amber {
+  background:rgba(255,160,0,0.4);
+}
+
+.block-box-green {
+  background:rgba(76,175,80,0.4);
+}
+
+.block-box-red {
+  background:rgba(211,47,47,0.4);
+}
+
+.block-box-brown {
+  background:rgba(121,85,72,0.4);
+}
+
+/* Block Positioning Classes */
+
+/* Part 1 - Length */
+.block-half-hour {
+  position:absolute;
+  width: 54px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.block-hour {
+  position:absolute;
+  width: 54px;
+  height: 37px;
+  border-radius: 5px;
+}
+
+.block-hour-half {
+  position:absolute;
+  width: 54px;
+  height: 56px;
+  border-radius: 5px;
+}
+
+.block-two-hours {
+  position:absolute;
+  width: 54px;
+  height: 76px;
+  border-radius: 5px;
+}
+
+.block-two-half {
+  position:absolute;
+  width: 54px;
+  height: 96px;
+  border-radius: 5px;
+}
+
+.block-three-hours {
+  position:absolute;
+  width: 54px;
+  height: 116px;
+  border-radius: 5px;
+}
+
+.block-three-half {
+  position:absolute;
+  width: 54px;
+  height: 136px;
+  border-radius: 5px;
+}
+
+.block-four-hours {
+  position:absolute;
+  width: 54px;
+  height: 154px;
+  border-radius: 2px;
+}
+
+/* Part 2 - Day */
+
+.monday {
+	left:69px;
+}
+
+.tuesday {
+	left:163px;
+}
+
+.wednesday {
+	left:267px;
+}
+
+.thursday {
+	left:372px;
+}
+
+.friday {
+	left:469px;
+}
+
+/* Part 3 - Time */
+
+.eight {
+	top:83px;
+}
+
+.eightthirty {
+	top:101px;
+}
+
+.nine {
+	top:120px;
+}
+
+.ninethirty {
+	top:141px;
+}
+
+.ten {
+  top:158px;
+}
+
+.tenthirty {
+	top:179px;
+}
+
+.eleven{
+	top:198px;
+}
+
+.eleventhirty {
+	top:218px;
+}
+
+.twelve {
+	top:236px;
+}
+
+.twelvethirty {
+	top:257px;
+}
+
+.thirteen {
+	top:275px;
+}
+
+.thirteenthirty {
+	top:294px;
+}
+
+.fourteen {
+	top:314px;
+}
+
+.fourteenthirty {
+	top:332px;
+}
+
+.fifteen {
+	top:350px;
+}
+
+.fifteenthirty {
+	top:371px;
+}
+
+.sixteen {
+	top:389px;
+}
+
+.sixteenthirty {
+	top:409px;
+}
+
+.seventeen {
+	top:428px;
+}
+
+.seventeenthirty {
+	top:447px;
+}
+
+.eightteen {
+	top:465px;
+}
+
+.eightteenthirty {
+	top:485px;
+}
+
+.nineteen {
+	top:504px;
+}
+
+.nineteenthirty {
+	top:524px;
+}
+
+.twenty {
+	top:542px;
+}
+
+.twentythirty {
+	top:561px;
+}
+
+.twentyone {
+	top:581px;
+}
+
+.twentyonethirty {
+	top:599px;
+}
+
+.twentytwo {
+	top:618px;
+}
+
+.twentytwothirty {
+	top:638px;
+}
+
+.twentythree {
+	top:656px;
+}
+
+.twentythreethirty {
+	top:675px;
+}
+
+/*  Modal  */
+
+.modal-header{
+  padding:2px 16px;
+  color:black;
+  background-color: white;
+}
+
+.modal-content {
+  border:1px solid #333;
+  min-width:400px;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  width:100%;
+  color:black
+  background-color:white;
+}
+
+.modal {
+  display:none;
+  text-align:center;
+  position:fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow: auto;
+  color:black;
+  border:1px solid #333;
+}
+
+#studentform {
+  width:100%;
+}
+
+input[type="text"] {
+   display: block;
+   margin : 0 auto;
+}
+
+.modal button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #333;
+    width:70px;
+    height:25px;
+    padding:0;
+    margin:0 auto;
+    margin:bottom:5px;
+}
+
+.modal button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.modal-content {
+    position:relative;
+    margin: 15% auto; 
+    padding: 0;
+    width: 30%; 
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1), 0 6px 20px 0 rgba(0,0,0,1);
+}
+
+.close {
+  color:black;
+  float:right;
+  font-size:20px; 
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#BlName {
+  width:200px;
+}
+
+/* Smaller Screens */
+
+@media only screen and (max-width : 1150px) {
+  #divider {
+    display:none;
+  }
+
+  #side-wrapper {
+    margin-bottom:20px;
+    margin-left:calc(50% - 165px);
+  }
+
+  #schedule-container {
+    margin:0 auto;
+    left:calc(50% - 284px);
+  }
+
+  #wrapper {
+     left:45px;
+     margin-left:0px;
+     min-width:560px;
+  }
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top:30px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h4 {
+  display: block;
+  font-weight: bold;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+button {
+  margin-top:5px;
+  margin-bottom:15px;
+}
